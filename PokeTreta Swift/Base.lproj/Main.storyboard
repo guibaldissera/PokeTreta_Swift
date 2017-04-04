@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="836" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu Jogador View Controller-->
         <scene sceneID="KeX-6M-NHe">
             <objects>
-                <viewController id="od7-K9-6J6" sceneMemberID="viewController">
+                <viewController id="od7-K9-6J6" customClass="MenuJogadorViewController" customModule="PokeTreta_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NuQ-Tn-3xa"/>
                         <viewControllerLayoutGuide type="bottom" id="rvl-LS-Esw"/>
@@ -172,11 +172,10 @@
             </objects>
             <point key="canvasLocation" x="3348" y="-528"/>
         </scene>
-        <!--View Controller-->
+        <!--Listar Pokemons View Controller-->
         <scene sceneID="C4F-vt-E6f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KiD-10-t6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="P6u-rW-g0T" sceneMemberID="viewController">
+                <viewController id="P6u-rW-g0T" customClass="ListarPokemonsViewController" customModule="PokeTreta_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rrv-zS-urS"/>
                         <viewControllerLayoutGuide type="bottom" id="Jid-cR-lRO"/>
@@ -204,13 +203,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KiD-10-t6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="924" y="1037.6311844077961"/>
         </scene>
-        <!--View Controller-->
+        <!--Batalha View Controller-->
         <scene sceneID="Re9-BB-aMd">
             <objects>
-                <viewController id="X4f-fr-7wT" sceneMemberID="viewController">
+                <viewController id="X4f-fr-7wT" customClass="BatalhaViewController" customModule="PokeTreta_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lqj-Nc-g7P"/>
                         <viewControllerLayoutGuide type="bottom" id="ZzF-ye-8A5"/>
@@ -253,6 +253,6 @@
         <image name="botaoJogar" width="320" height="188"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pm4-su-W9j"/>
+        <segue reference="Zhk-NB-GWM"/>
     </inferredMetricsTieBreakers>
 </document>
