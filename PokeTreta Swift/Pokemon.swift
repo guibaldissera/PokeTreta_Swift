@@ -11,10 +11,10 @@ import UIKit
 class Pokemon: NSObject {
 
 	var name : String = ""
-	var type : Int = 0
+	var type : String = ""
 	var exp : Int = 0
 	
-	init(name: String, type: Int, experience: Int) {
+	init(name: String, type: String, experience: Int) {
 		super.init()
 		
 		self.name = name
