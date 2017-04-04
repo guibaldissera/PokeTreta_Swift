@@ -14,6 +14,11 @@ class ListarPokemonsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		
+//		let defaults = UserDefaults.standard
+		
+//		let g = defaults.object(forKey: "gameInstace") as! Gamer
+//		NSLog("%@", g.name)
     }
 
     override func didReceiveMemoryWarning() {

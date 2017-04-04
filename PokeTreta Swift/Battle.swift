@@ -23,7 +23,7 @@ class Battle: NSObject {
 	func battle() -> Gamer {
 		var winner : Gamer
 		
-		if (self.gym == nil) {
+		if (self.gym?.leader == nil) {
 			winner = self.challenger!
 		} else {
 			let bestPokesChallenger = self.challenger!.getBestPokemons()
@@ -49,6 +49,7 @@ class Battle: NSObject {
 			}
 		}
 		
+		self.gym?.changeLeader(leader: winner)
 		return winner
 	}
 	

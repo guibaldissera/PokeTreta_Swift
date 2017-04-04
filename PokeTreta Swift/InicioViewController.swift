@@ -13,6 +13,13 @@ class InicioViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+//		let defaults = UserDefaults.standard
+		
+//		let g = Game.init(name: "Jogo do pokemon massa")
+		
+//		defaults.set(g, forKey: "gameInstance")
+		
 	}
 
 	override func didReceiveMemoryWarning() {
