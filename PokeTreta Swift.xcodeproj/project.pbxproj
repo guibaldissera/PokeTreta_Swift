@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD7298091E94114C00344274 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7298081E94114C00344274 /* Game.swift */; };
+		BD72980B1E94117200344274 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72980A1E94117200344274 /* Pokemon.swift */; };
+		BD72980D1E94119500344274 /* Gamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72980C1E94119500344274 /* Gamer.swift */; };
+		BD72980F1E9411AC00344274 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72980E1E9411AC00344274 /* Gym.swift */; };
+		BD7298111E941EB100344274 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7298101E941EB100344274 /* Battle.swift */; };
 		BDF74EB61E940D2000B9D08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF74EB51E940D2000B9D08B /* AppDelegate.swift */; };
 		BDF74EB81E940D2000B9D08B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF74EB71E940D2000B9D08B /* ViewController.swift */; };
 		BDF74EBB1E940D2000B9D08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF74EB91E940D2000B9D08B /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD7298081E94114C00344274 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BD72980A1E94117200344274 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		BD72980C1E94119500344274 /* Gamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamer.swift; sourceTree = "<group>"; };
+		BD72980E1E9411AC00344274 /* Gym.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		BD7298101E941EB100344274 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		BDF74EB21E940D2000B9D08B /* PokeTreta Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PokeTreta Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF74EB51E940D2000B9D08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF74EB71E940D2000B9D08B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD7298071E94110300344274 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD7298081E94114C00344274 /* Game.swift */,
+				BD72980A1E94117200344274 /* Pokemon.swift */,
+				BD72980C1E94119500344274 /* Gamer.swift */,
+				BD72980E1E9411AC00344274 /* Gym.swift */,
+				BD7298101E941EB100344274 /* Battle.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BDF74EA91E940D2000B9D08B = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +76,7 @@
 		BDF74EB41E940D2000B9D08B /* PokeTreta Swift */ = {
 			isa = PBXGroup;
 			children = (
+				BD7298071E94110300344274 /* Model */,
 				BDF74EB51E940D2000B9D08B /* AppDelegate.swift */,
 				BDF74EB71E940D2000B9D08B /* ViewController.swift */,
 				BDF74EB91E940D2000B9D08B /* Main.storyboard */,
@@ -138,6 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF74EB81E940D2000B9D08B /* ViewController.swift in Sources */,
+				BD7298111E941EB100344274 /* Battle.swift in Sources */,
+				BD72980F1E9411AC00344274 /* Gym.swift in Sources */,
+				BD72980B1E94117200344274 /* Pokemon.swift in Sources */,
+				BD72980D1E94119500344274 /* Gamer.swift in Sources */,
+				BD7298091E94114C00344274 /* Game.swift in Sources */,
 				BDF74EB61E940D2000B9D08B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +328,7 @@
 				BDF74EC61E940D2000B9D08B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
