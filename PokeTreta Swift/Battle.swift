@@ -56,25 +56,57 @@ class Battle: NSObject {
 		let levelDifference = pokeChallenger.getLevel() - pokeLeader.getLevel()
 		var winner: Pokemon
 		
-		
 		if (levelDifference >= 3) {
+			giveExpForPokemons(pokeWinner: pokeChallenger, pokeLoser: pokeLeader)
 			winner = pokeChallenger
+		} else if (levelDifference <= -3) {
+			giveExpForPokemons(pokeWinner: pokeLeader, pokeLoser: pokeChallenger)
+			winner = pokeLeader
 		} else {
-			if (levelDifference <= -3) {
+			if (comparePokemonTypes(typePokeChallenger: pokeChallenger.type, typePokeLeader: pokeLeader.type) == -1) {
+				giveExpForPokemons(pokeWinner: pokeLeader, pokeLoser: pokeChallenger)
 				winner = pokeLeader
-			} else {
-//				if (levelDifference < 3 && levelDifference > -3 && ) {
-				
-//				} else {
-				
-//				}
+			} else if (comparePokemonTypes(typePokeChallenger: pokeChallenger.type, typePokeLeader: pokeLeader.type) == 1) {
+				giveExpForPokemons(pokeWinner: pokeChallenger, pokeLoser: pokeLeader)
 				winner = pokeChallenger
+			} else {
+				if (arc4random_uniform(100) % 2 == 0) {
+					giveExpForPokemons(pokeWinner: pokeChallenger, pokeLoser: pokeLeader)
+					winner = pokeChallenger
+				} else {
+					giveExpForPokemons(pokeWinner: pokeLeader, pokeLoser: pokeChallenger)
+					winner = pokeLeader
+				}
 			}
+		}
+	
+		return winner
+	}
+	
+	func comparePokemonTypes(typePokeChallenger: String, typePokeLeader: String) -> Int {
+		var winner = 0
+		
+		if (typePokeChallenger == "fogo" && typePokeLeader == "agua") {
+			winner = -1
+		} else if (typePokeChallenger == "fogo" && typePokeLeader == "vento") {
+			winner = 1
+		} else if (typePokeChallenger == "agua" && typePokeLeader == "vento") {
+			winner = -1
+		} else if (typePokeChallenger == "agua" && typePokeLeader == "fogo") {
+			winner = 1
+		} else if (typePokeChallenger == "vento" && typePokeLeader == "fogo") {
+			winner = -1
+		} else if (typePokeChallenger == "vento" && typePokeLeader == "agua") {
+			winner = 1
+		} else {
+			winner = 0
 		}
 		
 		return winner
 	}
 	
-	
-	
+	func giveExpForPokemons(pokeWinner: Pokemon, pokeLoser: Pokemon) {
+		pokeWinner.exp = pokeWinner.exp + 35
+		pokeLoser.exp = pokeLoser.exp + 10
+	}
 }
