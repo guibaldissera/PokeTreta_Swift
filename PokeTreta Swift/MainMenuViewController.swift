@@ -9,11 +9,19 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
+	
+	var game: Game!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//		self.performSegue(withIdentifier: "game", sender: self)
+		
+		if (game != nil) {
+			NSLog("Game name %@", self.game.name)
+		} else {
+			NSLog("Game dont exist")
+		}
     }
 
     override func didReceiveMemoryWarning() {
