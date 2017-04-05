@@ -11,13 +11,38 @@ let TYPE_FIRE = "fogo"
 let TYPE_WIND = "vento"
 let TYPE_WATER = "agua"
 
-class Game: NSObject {
-	
+class Game: NSObject, NSCoding {
+
 	var name : String = ""
 	var player : Gamer?
 	var pokemons = [Pokemon]()
 	var gamers = [Gamer]()
 	var gyms = [Gym]()
+	
+	required init(coder aDecoder:NSCoder) {
+		self.name = aDecoder.decodeObject(forKey: "Name") as! String
+		self.player = aDecoder.decodeObject(forKey: "Player") as? Gamer
+		self.pokemons = aDecoder.decodeObject(forKey: "Pokemons") as! [Pokemon]
+		self.gamers = aDecoder.decodeObject(forKey: "Gamers") as! [Gamer]
+		self.gyms = aDecoder.decodeObject(forKey: "Gyms") as! [Gym]
+	}
+	
+	func encode(with aCoder: NSCoder) {
+		
+		aCoder.encode(name, forKey: "Name")
+		aCoder.encode(player, forKey: "Player")
+		aCoder.encode(pokemons, forKey: "Pokemons")
+		aCoder.encode(gamers, forKey: "Gamers")
+		aCoder.encode(gyms, forKey: "Gyms")
+		
+	}
+	
+	func saveGame() {
+		let defaults = UserDefaults.standard
+		
+		defaults.set(NSKeyedArchiver.archivedData(withRootObject: self), forKey: "game")
+		defaults.synchronize()
+	}
 	
 	init(name: String) {
 		super.init()

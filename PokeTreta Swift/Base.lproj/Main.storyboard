@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="botaoJogar"/>
                                 <connections>
-                                    <segue destination="24I-qt-4a8" kind="presentation" id="e9a-GN-Kn5"/>
+                                    <segue destination="24I-qt-4a8" kind="presentation" identifier="segueToMainMenuViewController" id="e9a-GN-Kn5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="aou-vE-KJT">
             <objects>
-                <viewController id="24I-qt-4a8" sceneMemberID="viewController">
+                <viewController id="24I-qt-4a8" customClass="MainMenuViewController" customModule="PokeTreta_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QZp-Zr-DfT"/>
                         <viewControllerLayoutGuide type="bottom" id="5an-Va-uQ7"/>
@@ -226,6 +226,6 @@
         <image name="botaoJogar" width="320" height="188"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zhk-NB-GWM"/>
+        <segue reference="e9a-GN-Kn5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -27,6 +27,22 @@ class InicioViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
-
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		
+		if (segue.identifier == "segueToMainMenuViewController") {
+			
+			let mainMenuViewController = segue.destination as! MainMenuViewController
+			
+			//let mainMenuViewController:MainMenuViewController = segue.destination as! MainMenuViewController
+			
+			
+			
+			let g = Game.init(name: "Jogo do pokemon massa")
+			mainMenuViewController.game = g
+			
+		}
+	}
 }
 
