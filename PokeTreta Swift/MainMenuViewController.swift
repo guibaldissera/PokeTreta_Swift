@@ -14,8 +14,6 @@ class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//		self.performSegue(withIdentifier: "game", sender: self)
 		
 		if (game != nil) {
 			NSLog("Game name %@", self.game.name)
@@ -27,6 +25,23 @@ class MainMenuViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if (segue.identifier == "segueToMainPlayer") {
+            
+            let MenuJogadorViewController = segue.destination as! MenuJogadorViewController
+            
+            
+            
+            let g = game.player
+            MenuJogadorViewController.player = g
+            
+            let a = game.pokemons
+            MenuJogadorViewController.pokemons = a
+        }
     }
     
 

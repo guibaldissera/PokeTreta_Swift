@@ -58,7 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu Jogador"/>
                                 <connections>
-                                    <segue destination="od7-K9-6J6" kind="presentation" id="1IE-Ki-oei"/>
+                                    <segue destination="od7-K9-6J6" kind="presentation" identifier="SegueToMainPlayer" id="1IE-Ki-oei"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVQ-gi-d8d">
@@ -123,6 +123,9 @@
                                 <rect key="frame" x="108" y="222" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Capturar Pokemon"/>
+                                <connections>
+                                    <action selector="ActionToCapturePokemons:" destination="od7-K9-6J6" eventType="touchUpInside" id="jOV-ZT-uAw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-Np-i1I">
                                 <rect key="frame" x="168" y="540" width="39" height="30"/>
@@ -136,10 +139,16 @@
                                 <rect key="frame" x="114" y="286" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Listar Pokemons"/>
+                                <connections>
+                                    <action selector="ActionToListPokemonsPlayers:" destination="od7-K9-6J6" eventType="touchUpInside" id="ZhY-MN-xAY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ActionToListPokemonPlayer" destination="S6d-6V-EUj" id="tmU-5K-yat"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nR-v5-FDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,6 +235,6 @@
         <image name="botaoJogar" width="320" height="188"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e9a-GN-Kn5"/>
+        <segue reference="Zhk-NB-GWM"/>
     </inferredMetricsTieBreakers>
 </document>

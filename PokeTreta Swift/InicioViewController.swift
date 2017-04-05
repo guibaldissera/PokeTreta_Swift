@@ -35,8 +35,6 @@ class InicioViewController: UIViewController {
 			
 			let mainMenuViewController = segue.destination as! MainMenuViewController
 			
-			//let mainMenuViewController:MainMenuViewController = segue.destination as! MainMenuViewController
-			
 			
 			
 			let g = Game.init(name: "Jogo do pokemon massa")

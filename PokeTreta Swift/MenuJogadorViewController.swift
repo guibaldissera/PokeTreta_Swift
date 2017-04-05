@@ -10,6 +10,9 @@ import UIKit
 
 class MenuJogadorViewController: UIViewController {
 
+    var pokemons = [Pokemon]()
+    var player : Gamer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,26 @@ class MenuJogadorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func ActionToCapturePokemons(_ sender: Any) {
+        
+        let jogo = Game.init(name: "kkk")
+        
+        player?.pokemons.append(jogo.getRandomPokemon())
+    }
 
+    @IBAction func ActionToListPokemonsPlayers(_ sender: Any) {
+        
+        
+//        for pokemons in (player?.pokemons)!{
+//            
+//        }
+        
+    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
