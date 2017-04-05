@@ -28,6 +28,8 @@ class Game: NSObject {
 		self.pokemons = createPokemon()
 		self.gamers = createGamers()
 		self.gyms = createGyms()
+        
+        self.saveInstanceInArchive()
 	}
 	
 	func createPokemon() -> [Pokemon] {
@@ -72,4 +74,15 @@ class Game: NSObject {
 		let pokeNew = Pokemon.init(name: p.name, type: p.type, experience: p.exp)
 		return pokeNew
 	}
+    
+    func saveInstanceInArchive(){
+        
+        let array = NSArray()
+        
+        for pokemon in self.pokemons{
+            array.adding(pokemon)
+        }
+        
+        array.write(toFile: "/temp/listPokemons.plist", atomically: true)
+    }
 }
